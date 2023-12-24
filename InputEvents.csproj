@@ -8,4 +8,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="SimpleNewsAPI" Version="1.0.2" />
+  </ItemGroup>
+
 </Project>
