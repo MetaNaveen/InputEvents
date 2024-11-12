@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InputEvents"
         mc:Ignorable="d"
-        Title="WPF - Input Events" Height="450" Width="800"
+        Title="Simple News App" Height="450" Width="800"
         PreviewKeyDown="KeyEvents_PreviewKeyDown">
    <Grid x:Name="mainGrid">
       <Grid.RowDefinitions>

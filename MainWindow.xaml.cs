@@ -52,13 +52,13 @@ public partial class MainWindow : Window {
                newsListBox.SelectedItems.Clear ();
                newsListBox.SelectedIndex = 0;
                newsListBox.ScrollIntoView (newsListBox.SelectedItem);
-               e.Handled = true;
+               //e.Handled = true;
                break;
             case Key.L: // Last Element
                newsListBox.SelectedItems.Clear ();
                newsListBox.SelectedIndex = newsListBox.Items.Count - 1;
                newsListBox.ScrollIntoView (newsListBox.SelectedItem);
-               e.Handled = true;
+               //e.Handled = true;
                break;
             case Key.Escape: // Reset Selection
                newsListBox.SelectedItems.Clear ();
