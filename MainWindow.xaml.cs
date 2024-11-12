@@ -19,13 +19,19 @@ public partial class MainWindow : Window {
       FetchData ();
       // Event handlers
       btnLoadMore.Click += BtnLoadMore_Click;
-      this.AddHandler (Button.ClickEvent, new RoutedEventHandler (ButtonClickHandler), false);
+      btnAuthor.Click += BtnAuthor_Click;
       //this.AddHandler (Button.ClickEvent, new RoutedEventHandler (ButtonClickHandler), false);
+      //this.AddHandler (Button.ClickEvent, new RoutedEventHandler (ButtonClickHandler), false);
+
       // Command binding
       CommandBinding capitalizeCommandBinding
          = new (CapitalizeCommand, ExecuteCustomCommand, CanExecuteCustomCommand);
       this.CommandBindings.Add (capitalizeCommandBinding);
       this.DataContext = this;
+   }
+
+   private void BtnAuthor_Click (object sender, RoutedEventArgs e) {
+      MessageBox.Show ($"Author: Naveen Kumar\nGithub: MetaNaveen");
    }
 
    #region RoutedEvents
@@ -93,7 +99,7 @@ public partial class MainWindow : Window {
    private void NewsItemCopy_Click (object sender, RoutedEventArgs e) {
       //MessageBox.Show ($"Source: {e.Source}\nOriginalSource: {e.OriginalSource}\nHandled: {e.Handled}\nRoutedEvent: {e.RoutedEvent.Name}");
       e.Handled = false;
-      MessageBox.Show ("Button Click - Copy");
+      MessageBox.Show ("News item copied");
       newsListBox.SelectedItems.Clear ();
       Button clickedButton = sender as Button;
       if (clickedButton != null) {
